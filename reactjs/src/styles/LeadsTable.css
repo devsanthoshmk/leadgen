@@ -1,0 +1,296 @@
+.leads-table-container {
+  padding: 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-toolbar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.toolbar-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.filter-select,
+.sort-select {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 150px;
+}
+
+.table-wrapper {
+  flex: 1;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.leads-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.leads-table thead {
+  background: var(--light);
+  border-bottom: 2px solid var(--border);
+  position: sticky;
+  top: 0;
+}
+
+.leads-table th {
+  padding: 14px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--dark);
+  white-space: nowrap;
+}
+
+.leads-table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: all 0.2s;
+}
+
+.leads-table tbody tr:hover {
+  background: var(--light);
+}
+
+.leads-table td {
+  padding: 14px;
+  color: var(--text);
+}
+
+.company-cell {
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info strong {
+  margin-bottom: 4px;
+}
+
+.contact-info small {
+  color: var(--text-light);
+  font-size: 13px;
+}
+
+.email-cell a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.email-cell a:hover {
+  text-decoration: underline;
+}
+
+.location-cell {
+  color: var(--text-light);
+}
+
+.score-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  min-width: 50px;
+  font-size: 13px;
+}
+
+.score-badge.badge-hot {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.score-badge.badge-warm {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.score-badge.badge-cold {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 12px;
+}
+
+.status-badge.badge-new {
+  background: #dbeafe;
+  color: #0c4a6e;
+}
+
+.status-badge.badge-contacted {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.badge-qualified {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-badge.badge-negotiation {
+  background: #fecaca;
+  color: #7f1d1d;
+}
+
+.status-badge.badge-won {
+  background: #86efac;
+  color: #166534;
+}
+
+.status-badge.badge-lost {
+  background: #fca5a5;
+  color: #7f1d1d;
+}
+
+.actions-cell {
+  text-align: right;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.btn-icon {
+  padding: 6px 8px;
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.btn-icon:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.btn-add {
+  background: #dcfce7;
+  border-color: var(--success);
+}
+
+.btn-add:hover {
+  background: var(--success);
+  color: white;
+}
+
+.btn-delete {
+  background: #fee2e2;
+  border-color: var(--danger);
+}
+
+.btn-delete:hover {
+  background: var(--danger);
+  color: white;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 32px;
+  color: var(--text-light);
+}
+
+.empty-state p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.empty-state .small {
+  font-size: 13px;
+}
+
+.table-footer {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-light);
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .leads-table-container {
+    padding: 16px;
+  }
+
+  .table-toolbar {
+    flex-direction: column;
+  }
+
+  .search-box {
+    min-width: auto;
+  }
+
+  .toolbar-controls {
+    width: 100%;
+  }
+
+  .filter-select,
+  .sort-select {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .leads-table {
+    font-size: 12px;
+  }
+
+  .leads-table th,
+  .leads-table td {
+    padding: 10px;
+  }
+
+  .email-cell,
+  .contact-info {
+    display: none;
+  }
+}
