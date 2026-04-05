@@ -184,3 +184,34 @@ export async function search(query) {
 
   return Array.from(new Map(fullList.map(item => [item.title + item.address, item])).values());
 }
+
+// SAMPLE OUTPUT
+// [
+//   {
+//     title: 'Anytime Fitness Shimbashi',
+//     stars: 4.4,
+//     reviews: 44385,
+//     category: 'Gym',
+//     address: 'Minato City, Tokyo, Japan',
+//     completePhoneNumber: '+81364359145',
+//     url: 'https://www.anytimefitness.co.jp/shimbashi/'
+//   },
+//   {
+//     title: 'Club 360 Fitness and rehabilitation',
+//     stars: 4.8,
+//     reviews: 48227,
+//     category: 'Gym',
+//     address: 'Minato City, Tokyo, Japan',
+//     completePhoneNumber: '+81364349667',
+//     url: 'http://www.club360.jp/'
+//   },
+//   {
+//     title: 'GYMS',
+//     stars: 4.6,
+//     reviews: 46442,
+//     category: 'Gym',
+//     address: 'Shibuya, Tokyo, Japan',
+//     completePhoneNumber: '+81120634777',
+//     url: 'https://www.p-gyms.jp/'
+//   }.................
+// ]
